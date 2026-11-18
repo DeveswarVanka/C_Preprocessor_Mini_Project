@@ -58,15 +58,15 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    // Step 1: Remove comments
+    //  Remove comments
      commentRemoval(src, temp1);
      rewind(temp1);
 
-    // Step 2: Include header files
+    //  Include header files
     headerFileInclusion(temp1, temp2);
     rewind(temp2);
 
-     // Step 3: Replace macros
+     //  Replace macros
      process_macros(temp2, des);
 
     fclose(src);
